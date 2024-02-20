@@ -90,6 +90,8 @@ body{
 }
 
 .navigation ul li.active a .circle{
+    transition: 1s;
+    transition-delay: 1s;
     transform: translateY(-37px) scale(1);
 }
 
