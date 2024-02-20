@@ -78,6 +78,21 @@ body{
     transform: translateY(10px);
 }
 
+.navigation ul li a .circle{
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1.8px solid #fff;
+    transform: translateY(-37px) scale(0);
+}
+
+.navigation ul li.active a .circle{
+    transform: translateY(-37px) scale(1);
+}
+
 .indicator{
     position: absolute;
     top: -50%;
@@ -89,6 +104,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
 .indicator::before{
@@ -107,10 +123,30 @@ body{
     content: '';
     position: absolute;
     top: 50%;
-    left: -22px;
+    right: -22px;
     width: 20px;
     height: 20px;
     background: transparent;
     border-top-left-radius: 20px;
     box-shadow: -1px -10px 0 #06021b;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
 }
